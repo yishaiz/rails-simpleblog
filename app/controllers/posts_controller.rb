@@ -4,4 +4,13 @@ class PostsController < ApplicationController
        
     end
 
+    def new
+    
+    end
+
+    def create
+        # byebug
+        render plain: params[:post].inspect
+    end
+    
 end
