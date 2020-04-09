@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'posts#index', as: 'home'
   
-  get 'about' => "pages#about"
+  get 'about' => "pages#about", as: 'about'
+
+
   # get 'pages/about' => "pages#about"
   # get 'about-2' => "pages#about"
 
   resources :posts
+
 
 end
