@@ -2,6 +2,11 @@
 <h2><%= @post.title %></h1>
 <p><%= @post.body %></p>
 <hr>
-<%= link_to "Edit", edit_post_path(@post), class: 'btn- btn-warning' %>
+<%= link_to "Edit", edit_post_path(@post), class: 'btn btn-warning' %>
+
+<%= link_to "Delete", 
+    post_path(@post), 
+    method: :delete,
+    class: 'btn btn-danger' %>
 
 

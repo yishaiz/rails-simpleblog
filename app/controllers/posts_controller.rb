@@ -25,7 +25,10 @@ class PostsController < ApplicationController
         end
     end
 
-
+    def destroy
+        @post = Post.find(params[:id])
+        @post.delete
+    end
 
     def create
         # render plain: params[:post].inspect
