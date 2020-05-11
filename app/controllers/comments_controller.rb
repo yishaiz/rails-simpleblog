@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+    http_basic_authenticate_with name: 'rails', password: '1234', except: [:destroy]
+
     def create
         byebug
         # @post = Post.find(params[:id])
